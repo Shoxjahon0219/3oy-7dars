@@ -15,7 +15,7 @@ const getWaterProductById = async (req, res) => {
     const { id } = req.params;
     const product = await pool.query("SELECT * FROM water_products WHERE id = $1", [id]);
     
-    if (product.rows.length === 0) {
+    if (product.rows.length == 0) {
       return res.status(404).send({ error: "Water product not found" });
     }
     
@@ -55,7 +55,7 @@ const updateWaterProduct = async (req, res) => {
       [name, volume_liters, price, id]
     );
 
-    if (updatedProduct.rows.length === 0) {
+    if (updatedProduct.rows.length == 0) {
       return res.status(404).send({ error: "Water product not found" });
     }
 
@@ -78,7 +78,7 @@ const deleteWaterProduct = async (req, res) => {
       [id]
     );
 
-    if (deletedProduct.rows.length === 0) {
+    if (deletedProduct.rows.length == 0) {
       return res.status(404).send({ error: "Water product not found" });
     }
 
