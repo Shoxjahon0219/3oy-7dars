@@ -3,7 +3,7 @@ const pool = require("../config/db");
 const getAllWaterProducts = async (req, res) => {
   try {
     const products = await pool.query(
-      "SELECT * FROM water_products ORDER BY id"
+      "SELECT * FROM water_products"
     );
     res.status(200).send(products.rows);
   } catch (err) {
