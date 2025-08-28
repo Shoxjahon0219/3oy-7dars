@@ -2,7 +2,7 @@ const { Router } = require("express");
 const customerRouter = require("./customer.route");
 const waterProductRoutes = require("./waterProduct.routes");
 const addressRouter = require("./address.route");
-const waterProductRoutes = require("./waterProduct.routes");
+const deliveryStaffRoutes = require("./deliveryStaff.routes");
 
 const router = Router();
 
