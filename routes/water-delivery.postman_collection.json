@@ -1,0 +1,672 @@
+{
+  "info": {
+    "name": "Water Delivery API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "customers",
+      "item": [
+        {
+          "name": "Get all customers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/customers",
+              "host": ["http://localhost:3000/api"],
+              "path": ["customers"]
+            }
+          }
+        },
+        {
+          "name": "Get customers by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/customers/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["customers", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create customers",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"phone\": \"+998901112233\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/customers",
+              "host": ["http://localhost:3000/api"],
+              "path": ["customers"]
+            }
+          }
+        },
+        {
+          "name": "Update customers",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"phone\": \"+998901112233\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/customers/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["customers", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete customers",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/customers/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["customers", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "item": [
+        {
+          "name": "Get all address",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/address",
+              "host": ["http://localhost:3000/api"],
+              "path": ["address"]
+            }
+          }
+        },
+        {
+          "name": "Get address by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/address/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["address", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create address",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Home\",\n  \"customer_id\": 1,\n  \"address\": \"Main St 123\",\n  \"location\": \"41.2995,69.2401\",\n  \"district_id\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/address",
+              "host": ["http://localhost:3000/api"],
+              "path": ["address"]
+            }
+          }
+        },
+        {
+          "name": "Update address",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Home\",\n  \"customer_id\": 1,\n  \"address\": \"Main St 123\",\n  \"location\": \"41.2995,69.2401\",\n  \"district_id\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/address/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["address", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete address",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/address/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["address", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "districts",
+      "item": [
+        {
+          "name": "Get all districts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/districts",
+              "host": ["http://localhost:3000/api"],
+              "path": ["districts"]
+            }
+          }
+        },
+        {
+          "name": "Get districts by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/districts/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["districts", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create districts",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Chilonzor\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/districts",
+              "host": ["http://localhost:3000/api"],
+              "path": ["districts"]
+            }
+          }
+        },
+        {
+          "name": "Update districts",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Chilonzor\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/districts/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["districts", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete districts",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/districts/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["districts", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "delivery_staff",
+      "item": [
+        {
+          "name": "Get all delivery_staff",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/delivery_staff",
+              "host": ["http://localhost:3000/api"],
+              "path": ["delivery_staff"]
+            }
+          }
+        },
+        {
+          "name": "Get delivery_staff by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/delivery_staff/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["delivery_staff", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create delivery_staff",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Alex Driver\",\n  \"phone\": \"+998901234567\",\n  \"vehicle_number\": \"01A123BC\",\n  \"district_id\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/delivery_staff",
+              "host": ["http://localhost:3000/api"],
+              "path": ["delivery_staff"]
+            }
+          }
+        },
+        {
+          "name": "Update delivery_staff",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Alex Driver\",\n  \"phone\": \"+998901234567\",\n  \"vehicle_number\": \"01A123BC\",\n  \"district_id\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/delivery_staff/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["delivery_staff", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete delivery_staff",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/delivery_staff/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["delivery_staff", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "Get all orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/orders",
+              "host": ["http://localhost:3000/api"],
+              "path": ["orders"]
+            }
+          }
+        },
+        {
+          "name": "Get orders by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/orders/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["orders", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create orders",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_id\": 1,\n  \"delivery_staff_id\": 1,\n  \"order_date\": \"2025-08-30\",\n  \"status\": \"pending\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/orders",
+              "host": ["http://localhost:3000/api"],
+              "path": ["orders"]
+            }
+          }
+        },
+        {
+          "name": "Update orders",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_id\": 1,\n  \"delivery_staff_id\": 1,\n  \"order_date\": \"2025-08-30\",\n  \"status\": \"pending\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/orders/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["orders", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete orders",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/orders/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["orders", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "order_items",
+      "item": [
+        {
+          "name": "Get all order_items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/order_items",
+              "host": ["http://localhost:3000/api"],
+              "path": ["order_items"]
+            }
+          }
+        },
+        {
+          "name": "Get order_items by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/order_items/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["order_items", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create order_items",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"order_id\": 1,\n  \"product_id\": 1,\n  \"quantity\": 2,\n  \"total_price\": 20000\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/order_items",
+              "host": ["http://localhost:3000/api"],
+              "path": ["order_items"]
+            }
+          }
+        },
+        {
+          "name": "Update order_items",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"order_id\": 1,\n  \"product_id\": 1,\n  \"quantity\": 2,\n  \"total_price\": 20000\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/order_items/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["order_items", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete order_items",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/order_items/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["order_items", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "water_products",
+      "item": [
+        {
+          "name": "Get all water_products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/water_products",
+              "host": ["http://localhost:3000/api"],
+              "path": ["water_products"]
+            }
+          }
+        },
+        {
+          "name": "Get water_products by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/water_products/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["water_products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create water_products",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Water 19L\",\n  \"volume_liters\": 19,\n  \"price\": 10000\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/water_products",
+              "host": ["http://localhost:3000/api"],
+              "path": ["water_products"]
+            }
+          }
+        },
+        {
+          "name": "Update water_products",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Water 19L\",\n  \"volume_liters\": 19,\n  \"price\": 10000\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/water_products/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["water_products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete water_products",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/water_products/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["water_products", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "payments",
+      "item": [
+        {
+          "name": "Get all payments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/payments",
+              "host": ["http://localhost:3000/api"],
+              "path": ["payments"]
+            }
+          }
+        },
+        {
+          "name": "Get payments by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/payments/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["payments", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create payments",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"order_id\": 1,\n  \"amount\": 20000,\n  \"payment_date\": \"2025-08-30\",\n  \"method\": \"cash\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/payments",
+              "host": ["http://localhost:3000/api"],
+              "path": ["payments"]
+            }
+          }
+        },
+        {
+          "name": "Update payments",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"order_id\": 1,\n  \"amount\": 20000,\n  \"payment_date\": \"2025-08-30\",\n  \"method\": \"cash\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/payments/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["payments", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete payments",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/payments/1",
+              "host": ["http://localhost:3000/api"],
+              "path": ["payments", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

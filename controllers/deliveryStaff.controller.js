@@ -17,15 +17,12 @@ const getDeliveryStaffById = async (req, res) => {
     const { id } = req.params;
     const staff = await pool.query(
       `
-      SELECT *
-      FROM delivery_staff ds 
-      LEFT JOIN regions r ON ds.region_id = r.id 
-      WHERE ds.id = $1
+      SELECT * FROM delivery_staff WHERE ds.id = $1
     `,
       [id]
     );
 
-    if (staff.rows.length === 0) {
+    if (staff.rows.length == 0) {
       return res.status(404).send({ error: "Delivery staff not found" });
     }
 
@@ -65,7 +62,7 @@ const updateDeliveryStaff = async (req, res) => {
       [name, phone, vehicle_number, region_id, id]
     );
 
-    if (updatedStaff.rows.length === 0) {
+    if (updatedStaff.rows.length == 0) {
       return res.status(404).send({ error: "Delivery staff not found" });
     }
 
@@ -88,7 +85,7 @@ const deleteDeliveryStaff = async (req, res) => {
       [id]
     );
 
-    if (deletedStaff.rows.length === 0) {
+    if (deletedStaff.rows.length == 0) {
       return res.status(404).send({ error: "Delivery staff not found" });
     }
 
